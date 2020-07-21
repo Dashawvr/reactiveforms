@@ -1,0 +1,25 @@
+.cards {
+  width: 350px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.image-wrapper {
+  width: 100%;
+}
+
+.image {
+  width: 100%;
+  height: 450px;
+  margin: 5px auto;
+}
+
+.text {
+  height: 60px;
+}
+
