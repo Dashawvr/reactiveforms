@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "reactiveforms"
+    }
+  },
+  "defaultProject": "reactiveforms",
+  "cli": {
+    "analytics": "b3436fcc-c369-4cb3-90af-83bd878aa1b1"
+  }
 }

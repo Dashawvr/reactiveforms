@@ -9,7 +9,7 @@ input, textarea {
 }
 .error {
   margin-top: -20px;
-  background: yellow;
+  background: red;
   padding: .5em;
   display: inline-block;
   font-size: .9em;

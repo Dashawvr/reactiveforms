@@ -13,7 +13,7 @@
     Message:
     <textarea type="text" formControlName="message"></textarea>
     <div *ngIf="submitted && messegeForm.controls.message.errors" class="error">
-      <div *ngIf="messegeForm.controls.message.errors.required">A message is required!!!!</div>
+      <div *ngIf="messegeForm.controls.message.errors.required">Message is required!!!!</div>
     </div>
   </label>
   <input type="submit" value="send message" class="cta">

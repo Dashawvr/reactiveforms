@@ -1,14 +1,17 @@
 <app-nav></app-nav>
-<section>
-  <router-outlet></router-outlet>
-</section>
 
 <div class="theme-switcher-wrap {{storedTheme}}">
 
   <label class="theme-switcher"
-  (click)="setTheme()">
+         (click)="setTheme()">
     <div class="switch-path">
       <div class="switch-handle"></div>
     </div>
   </label>
+
 </div>
+  <div class="content">
+<section>
+  <router-outlet></router-outlet>
+</section>
+  </div>

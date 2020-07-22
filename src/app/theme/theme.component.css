@@ -35,5 +35,9 @@
   transform: translateX(20px);
   background: #7bbb5e;
 }
+.content{
+  margin: 0;
+  padding: 0;
 
+}
 
