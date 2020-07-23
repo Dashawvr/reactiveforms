@@ -43,3 +43,13 @@
 .favorite:hover {
   background-color: #4ea8de;
 }
+
+.list-groups {
+  background-color: #7bbb5e;
+  border: 1px solid black;
+  border-radius: 10px;
+  list-style: none;
+}
+.list-groups-item {
+  padding: 10px;
+}
