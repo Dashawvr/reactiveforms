@@ -4,23 +4,32 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
-import { AboutComponent } from './favorite/about.component';
 import { ContactComponent } from './contact/contact.component';
-import {RouterModule, Routes} from '@angular/router';
-import {HttpClientModule} from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import { CardComponent } from './card/card.component';
 import { DetailComponent } from './detail/detail.component';
+import { FavoriteComponent } from './favorite/favorite.component';
+import { ThemeComponent } from './theme/theme.component';
+
+import {RouterModule, Routes} from '@angular/router';
+import {HttpClientModule} from '@angular/common/http';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 import {StringPipe} from './utils/string.pipe';
 import {CustomPipe} from './utils/custom.pipe';
 import {ImagePipe} from './utils/image.pipe';
-import { ThemeComponent } from './theme/theme.component';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+
+
 
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
-  {path: 'about', component: AboutComponent},
+  {path: 'favorite', component: FavoriteComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'movie-search', component: SearchComponent},
   {path: 'movie-detail', component: DetailComponent},
@@ -31,7 +40,6 @@ const routes: Routes = [
     AppComponent,
     HomeComponent,
     NavComponent,
-    AboutComponent,
     ContactComponent,
     SearchComponent,
     CardComponent,
@@ -39,14 +47,18 @@ const routes: Routes = [
     StringPipe,
     CustomPipe,
     ImagePipe,
-    ThemeComponent
+    ThemeComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule,
+    MatIconModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

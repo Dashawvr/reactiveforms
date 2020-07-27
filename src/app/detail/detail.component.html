@@ -3,7 +3,10 @@
   *ngIf="movieDetils | async as movie">
 
   <button class="btn btn-primary" routerLink="/">Go Back</button>
-  <button class="favorite" >Add to favorite</button>
+  <button (click)='movie.isLiked === true ? movie.isLiked = false : movie.isLiked = true; AddToFavorite(movie);'
+          [ngClass]='{active: movie.isLiked}' mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
   <h1 class="my-4">{{ movie.Title }}
     <small>
       <span class="badge badge-primary">

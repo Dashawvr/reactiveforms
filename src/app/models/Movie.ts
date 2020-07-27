@@ -10,6 +10,7 @@ export interface Rating {
   Value: string;
 }
 export interface MovieDetail {
+  isLiked: Boolean;
   similarMovies: any;
   Title: string;
   Year: string;

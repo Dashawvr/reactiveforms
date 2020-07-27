@@ -4,6 +4,7 @@ import {Movie, MovieDetail} from '../models/Movie';
 import {Observable} from 'rxjs';
 import {map, switchMap} from 'rxjs/operators';
 import {ActivatedRoute} from '@angular/router';
+import {FavoritesService} from '../services/favorites.service';
 
 
 @Component({
@@ -12,9 +13,10 @@ import {ActivatedRoute} from '@angular/router';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  movieDetils: Observable<MovieDetail>;
+  favorite;
 
-  constructor(private dataService: DataService, private route: ActivatedRoute) { }
+  movieDetils: Observable<MovieDetail>;
+  constructor(private dataService: DataService, private route: ActivatedRoute, private favoritesService: FavoritesService) { }
 
   ngOnInit(): void {
     this.movieDetils = this.route.queryParams.pipe(
@@ -36,4 +38,11 @@ export class DetailComponent implements OnInit {
     );
   }
 
+  // AddToFavorite(): void {
+  //   console.log('added');
+  //   alert(`added to Favorite${this.movieDetils}`);
+  // }
+  AddToFavorite(movie): void {
+    this.favoritesService.addToFavorites(movie);
+  }
 }
